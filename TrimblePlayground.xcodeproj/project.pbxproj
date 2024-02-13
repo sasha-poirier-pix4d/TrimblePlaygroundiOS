@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF3040182B722B1700EE2DC1 /* CatalystWebSocketOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3040172B722B1700EE2DC1 /* CatalystWebSocketOLD.swift */; };
+		CF75A43A2B76C84500947807 /* test_real.json in Resources */ = {isa = PBXBuildFile; fileRef = CF75A4392B76C84500947807 /* test_real.json */; };
+		CF86FC6E2B6B7AE0000455CF /* TrimblePlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FC6D2B6B7AE0000455CF /* TrimblePlaygroundApp.swift */; };
+		CF86FC702B6B7AE0000455CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FC6F2B6B7AE0000455CF /* ContentView.swift */; };
+		CF86FC722B6B7AE4000455CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF86FC712B6B7AE4000455CF /* Assets.xcassets */; };
+		CF86FC752B6B7AE4000455CF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF86FC742B6B7AE4000455CF /* Preview Assets.xcassets */; };
+		CF86FC7F2B6B7AE4000455CF /* TrimblePlaygroundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FC7E2B6B7AE4000455CF /* TrimblePlaygroundTests.swift */; };
+		CF86FCA12B6B7B3B000455CF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF86FCA02B6B7B3B000455CF /* MobileCoreServices.framework */; };
+		CF86FCA32B6B7B41000455CF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF86FCA22B6B7B41000455CF /* SystemConfiguration.framework */; };
+		CF86FCA52B6B7B46000455CF /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF86FCA42B6B7B46000455CF /* ExternalAccessory.framework */; };
+		CF86FCA82B6BAAAC000455CF /* test_doc_bad.json in Resources */ = {isa = PBXBuildFile; fileRef = CF86FCA72B6BAAAC000455CF /* test_doc_bad.json */; };
+		CF86FCAC2B6BC8C8000455CF /* PseudoExtras.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCAB2B6BC8C8000455CF /* PseudoExtras.swift */; };
+		CF86FCAD2B6BC8C8000455CF /* PseudoExtras.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCAB2B6BC8C8000455CF /* PseudoExtras.swift */; };
+		CF86FCAE2B6BC8C8000455CF /* PseudoExtras.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCAB2B6BC8C8000455CF /* PseudoExtras.swift */; };
+		CF86FCB02B6BCDAB000455CF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF86FCAF2B6BCDAB000455CF /* MapKit.framework */; };
+		CF86FCB22B6BDE4E000455CF /* MockTrimbleWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCB12B6BDE4E000455CF /* MockTrimbleWebSocket.swift */; };
+		CF86FCB62B6BE36E000455CF /* CatalystWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCB52B6BE36E000455CF /* CatalystWebSocket.swift */; };
+		CF86FCBA2B6BE551000455CF /* CatalystFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCB92B6BE551000455CF /* CatalystFacade.swift */; };
+		CF86FCBE2B6BEB92000455CF /* CatalystSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCBD2B6BEB92000455CF /* CatalystSDK.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF86FC7B2B6B7AE4000455CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF86FC622B6B7AE0000455CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF86FC692B6B7AE0000455CF;
+			remoteInfo = TrimblePlayground;
+		};
+		CF86FC852B6B7AE4000455CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF86FC622B6B7AE0000455CF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF86FC692B6B7AE0000455CF;
+			remoteInfo = TrimblePlayground;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF3040172B722B1700EE2DC1 /* CatalystWebSocketOLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalystWebSocketOLD.swift; sourceTree = "<group>"; };
+		CF75A4392B76C84500947807 /* test_real.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test_real.json; sourceTree = "<group>"; };
+		CF86FC6A2B6B7AE0000455CF /* TrimblePlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrimblePlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF86FC6D2B6B7AE0000455CF /* TrimblePlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimblePlaygroundApp.swift; sourceTree = "<group>"; };
+		CF86FC6F2B6B7AE0000455CF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CF86FC712B6B7AE4000455CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF86FC742B6B7AE4000455CF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CF86FC7A2B6B7AE4000455CF /* TrimblePlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrimblePlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF86FC7E2B6B7AE4000455CF /* TrimblePlaygroundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimblePlaygroundTests.swift; sourceTree = "<group>"; };
+		CF86FC842B6B7AE4000455CF /* TrimblePlaygroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrimblePlaygroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF86FCA02B6B7B3B000455CF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		CF86FCA22B6B7B41000455CF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CF86FCA42B6B7B46000455CF /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		CF86FCA62B6B7DBF000455CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CF86FCA72B6BAAAC000455CF /* test_doc_bad.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test_doc_bad.json; sourceTree = "<group>"; };
+		CF86FCAB2B6BC8C8000455CF /* PseudoExtras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PseudoExtras.swift; sourceTree = "<group>"; };
+		CF86FCAF2B6BCDAB000455CF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CF86FCB12B6BDE4E000455CF /* MockTrimbleWebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTrimbleWebSocket.swift; sourceTree = "<group>"; };
+		CF86FCB52B6BE36E000455CF /* CatalystWebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalystWebSocket.swift; sourceTree = "<group>"; };
+		CF86FCB92B6BE551000455CF /* CatalystFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalystFacade.swift; sourceTree = "<group>"; };
+		CF86FCBD2B6BEB92000455CF /* CatalystSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalystSDK.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF86FC672B6B7AE0000455CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF86FCA32B6B7B41000455CF /* SystemConfiguration.framework in Frameworks */,
+				CF86FCB02B6BCDAB000455CF /* MapKit.framework in Frameworks */,
+				CF86FCA52B6B7B46000455CF /* ExternalAccessory.framework in Frameworks */,
+				CF86FCA12B6B7B3B000455CF /* MobileCoreServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF86FC772B6B7AE4000455CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF86FC812B6B7AE4000455CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF86FC612B6B7AE0000455CF = {
+			isa = PBXGroup;
+			children = (
+				CF86FC9B2B6B7B18000455CF /* Frameworks */,
+				CF86FC6C2B6B7AE0000455CF /* TrimblePlayground */,
+				CF86FC7D2B6B7AE4000455CF /* TrimblePlaygroundTests */,
+				CF86FC6B2B6B7AE0000455CF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF86FC6B2B6B7AE0000455CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF86FC6A2B6B7AE0000455CF /* TrimblePlayground.app */,
+				CF86FC7A2B6B7AE4000455CF /* TrimblePlaygroundTests.xctest */,
+				CF86FC842B6B7AE4000455CF /* TrimblePlaygroundUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF86FC6C2B6B7AE0000455CF /* TrimblePlayground */ = {
+			isa = PBXGroup;
+			children = (
+				CF86FCA62B6B7DBF000455CF /* Info.plist */,
+				CF86FC6D2B6B7AE0000455CF /* TrimblePlaygroundApp.swift */,
+				CF86FC6F2B6B7AE0000455CF /* ContentView.swift */,
+				CF86FCB92B6BE551000455CF /* CatalystFacade.swift */,
+				CF86FCBD2B6BEB92000455CF /* CatalystSDK.swift */,
+				CF86FCB52B6BE36E000455CF /* CatalystWebSocket.swift */,
+				CF3040172B722B1700EE2DC1 /* CatalystWebSocketOLD.swift */,
+				CF86FCB12B6BDE4E000455CF /* MockTrimbleWebSocket.swift */,
+				CF86FCAB2B6BC8C8000455CF /* PseudoExtras.swift */,
+				CF86FC712B6B7AE4000455CF /* Assets.xcassets */,
+				CF86FC732B6B7AE4000455CF /* Preview Content */,
+			);
+			path = TrimblePlayground;
+			sourceTree = "<group>";
+		};
+		CF86FC732B6B7AE4000455CF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CF86FC742B6B7AE4000455CF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CF86FC7D2B6B7AE4000455CF /* TrimblePlaygroundTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF86FC7E2B6B7AE4000455CF /* TrimblePlaygroundTests.swift */,
+				CF86FCA72B6BAAAC000455CF /* test_doc_bad.json */,
+				CF75A4392B76C84500947807 /* test_real.json */,
+			);
+			path = TrimblePlaygroundTests;
+			sourceTree = "<group>";
+		};
+		CF86FC9B2B6B7B18000455CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF86FCAF2B6BCDAB000455CF /* MapKit.framework */,
+				CF86FCA42B6B7B46000455CF /* ExternalAccessory.framework */,
+				CF86FCA22B6B7B41000455CF /* SystemConfiguration.framework */,
+				CF86FCA02B6B7B3B000455CF /* MobileCoreServices.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF86FC692B6B7AE0000455CF /* TrimblePlayground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF86FC8E2B6B7AE4000455CF /* Build configuration list for PBXNativeTarget "TrimblePlayground" */;
+			buildPhases = (
+				CF86FC662B6B7AE0000455CF /* Sources */,
+				CF86FC672B6B7AE0000455CF /* Frameworks */,
+				CF86FC682B6B7AE0000455CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrimblePlayground;
+			packageProductDependencies = (
+			);
+			productName = TrimblePlayground;
+			productReference = CF86FC6A2B6B7AE0000455CF /* TrimblePlayground.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF86FC792B6B7AE4000455CF /* TrimblePlaygroundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF86FC912B6B7AE4000455CF /* Build configuration list for PBXNativeTarget "TrimblePlaygroundTests" */;
+			buildPhases = (
+				CF86FC762B6B7AE4000455CF /* Sources */,
+				CF86FC772B6B7AE4000455CF /* Frameworks */,
+				CF86FC782B6B7AE4000455CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF86FC7C2B6B7AE4000455CF /* PBXTargetDependency */,
+			);
+			name = TrimblePlaygroundTests;
+			productName = TrimblePlaygroundTests;
+			productReference = CF86FC7A2B6B7AE4000455CF /* TrimblePlaygroundTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CF86FC832B6B7AE4000455CF /* TrimblePlaygroundUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF86FC942B6B7AE4000455CF /* Build configuration list for PBXNativeTarget "TrimblePlaygroundUITests" */;
+			buildPhases = (
+				CF86FC802B6B7AE4000455CF /* Sources */,
+				CF86FC812B6B7AE4000455CF /* Frameworks */,
+				CF86FC822B6B7AE4000455CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF86FC862B6B7AE4000455CF /* PBXTargetDependency */,
+			);
+			name = TrimblePlaygroundUITests;
+			productName = TrimblePlaygroundUITests;
+			productReference = CF86FC842B6B7AE4000455CF /* TrimblePlaygroundUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF86FC622B6B7AE0000455CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					CF86FC692B6B7AE0000455CF = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					CF86FC792B6B7AE4000455CF = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = CF86FC692B6B7AE0000455CF;
+					};
+					CF86FC832B6B7AE4000455CF = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = CF86FC692B6B7AE0000455CF;
+					};
+				};
+			};
+			buildConfigurationList = CF86FC652B6B7AE0000455CF /* Build configuration list for PBXProject "TrimblePlayground" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF86FC612B6B7AE0000455CF;
+			packageReferences = (
+			);
+			productRefGroup = CF86FC6B2B6B7AE0000455CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF86FC692B6B7AE0000455CF /* TrimblePlayground */,
+				CF86FC792B6B7AE4000455CF /* TrimblePlaygroundTests */,
+				CF86FC832B6B7AE4000455CF /* TrimblePlaygroundUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF86FC682B6B7AE0000455CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF86FC752B6B7AE4000455CF /* Preview Assets.xcassets in Resources */,
+				CF86FC722B6B7AE4000455CF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF86FC782B6B7AE4000455CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF75A43A2B76C84500947807 /* test_real.json in Resources */,
+				CF86FCA82B6BAAAC000455CF /* test_doc_bad.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF86FC822B6B7AE4000455CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF86FC662B6B7AE0000455CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF86FC702B6B7AE0000455CF /* ContentView.swift in Sources */,
+				CF86FCB22B6BDE4E000455CF /* MockTrimbleWebSocket.swift in Sources */,
+				CF86FCBE2B6BEB92000455CF /* CatalystSDK.swift in Sources */,
+				CF86FCAC2B6BC8C8000455CF /* PseudoExtras.swift in Sources */,
+				CF86FC6E2B6B7AE0000455CF /* TrimblePlaygroundApp.swift in Sources */,
+				CF3040182B722B1700EE2DC1 /* CatalystWebSocketOLD.swift in Sources */,
+				CF86FCBA2B6BE551000455CF /* CatalystFacade.swift in Sources */,
+				CF86FCB62B6BE36E000455CF /* CatalystWebSocket.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF86FC762B6B7AE4000455CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF86FC7F2B6B7AE4000455CF /* TrimblePlaygroundTests.swift in Sources */,
+				CF86FCAD2B6BC8C8000455CF /* PseudoExtras.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF86FC802B6B7AE4000455CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF86FCAE2B6BC8C8000455CF /* PseudoExtras.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF86FC7C2B6B7AE4000455CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF86FC692B6B7AE0000455CF /* TrimblePlayground */;
+			targetProxy = CF86FC7B2B6B7AE4000455CF /* PBXContainerItemProxy */;
+		};
+		CF86FC862B6B7AE4000455CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF86FC692B6B7AE0000455CF /* TrimblePlayground */;
+			targetProxy = CF86FC852B6B7AE4000455CF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CF86FC8C2B6B7AE4000455CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CF86FC8D2B6B7AE4000455CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF86FC8F2B6B7AE4000455CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TrimblePlayground/Preview Content\"";
+				DEVELOPMENT_TEAM = HKB93E894N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TrimblePlayground/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ting.TrimblePlayground;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF86FC902B6B7AE4000455CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TrimblePlayground/Preview Content\"";
+				DEVELOPMENT_TEAM = HKB93E894N;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TrimblePlayground/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ting.TrimblePlayground;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CF86FC922B6B7AE4000455CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ting.TrimblePlaygroundTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrimblePlayground.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TrimblePlayground";
+			};
+			name = Debug;
+		};
+		CF86FC932B6B7AE4000455CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ting.TrimblePlaygroundTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TrimblePlayground.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TrimblePlayground";
+			};
+			name = Release;
+		};
+		CF86FC952B6B7AE4000455CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ting.TrimblePlaygroundUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrimblePlayground;
+			};
+			name = Debug;
+		};
+		CF86FC962B6B7AE4000455CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ting.TrimblePlaygroundUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TrimblePlayground;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF86FC652B6B7AE0000455CF /* Build configuration list for PBXProject "TrimblePlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF86FC8C2B6B7AE4000455CF /* Debug */,
+				CF86FC8D2B6B7AE4000455CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF86FC8E2B6B7AE4000455CF /* Build configuration list for PBXNativeTarget "TrimblePlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF86FC8F2B6B7AE4000455CF /* Debug */,
+				CF86FC902B6B7AE4000455CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF86FC912B6B7AE4000455CF /* Build configuration list for PBXNativeTarget "TrimblePlaygroundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF86FC922B6B7AE4000455CF /* Debug */,
+				CF86FC932B6B7AE4000455CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF86FC942B6B7AE4000455CF /* Build configuration list for PBXNativeTarget "TrimblePlaygroundUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF86FC952B6B7AE4000455CF /* Debug */,
+				CF86FC962B6B7AE4000455CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF86FC622B6B7AE0000455CF /* Project object */;
+}
