@@ -1,0 +1,43 @@
+{
+    "latitude": 46.5197,
+    "longitude": 6.6323,
+    "altitude": 500,
+    
+    "speed": 0.1,
+    "bearing": 175.0,
+    "accuracy": 0.5,
+    
+    "hdop": 0.2,
+    "vdop": 0.2,
+    "pdop": 0.2,
+    
+    "diffAge": 0.1,
+    "diffStatus": 2,
+    "diffID": 3,
+    
+    "vrms": 0.2,
+    "hrms": 0.2,
+    
+    "receiverModel": "Some Model",
+
+    "mockProvider": "",
+    
+    "mslHeight": 520.0,
+    "undulation": 32.0,
+    
+    "utcTime": 1706779821024,
+    "gpsTimeStamp": "",
+    "utcTimeStamp": "",
+    
+    "subscriptionType": 2,
+
+    "satellites": 2,
+    "totalSatInView": 3,
+    "satellitesView": 3,
+    "satellitesId": [1, 2, 3],
+    "satellitesElv": [10, 15, 20],
+    "satellitesAzm": [10, 15, 20],
+    "satellitesSnr": [20, 25, 30],
+    "satellitesUse": [true, false, true],
+    "satellitesType": [0, 1, 2]
+}
