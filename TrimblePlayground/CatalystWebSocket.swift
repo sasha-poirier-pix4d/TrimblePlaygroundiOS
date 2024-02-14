@@ -72,25 +72,14 @@ struct CatalystWebSocketView: View {
         VStack {
             HStack {
                 Button("Try connect WebSocket") {
-                    print("Connecting...")
-                    
-                    //TODO find port
-                    /*guard let checkUrl = URL(string:"socketport://trimble.mocklocationssampleapp.ios") else { /*promise(.failure(Never()));*/ return; }
-                    
-                    //Failure: Error Domain=NSURLErrorDomain Code=-1004 "Could not connect to the server." UserInfo={NSErrorFailingURLStringKey=ws://127.0.0.1:9635/, NSLocalizedDescription=Could not connect to the server., NSErrorFailingURLKey=ws://127.0.0.1:9635/}
-
-                    UIApplication.shared.open(checkUrl) { success in
-                        
-                    }*/
-                    
-                    self.messages.removeAll()
-                    guard let url = URL(string:"ws://127.0.0.1:9635") else { return }
-                    let req = URLRequest(url: url)
-                    
-                    self.task = URLSession.shared.webSocketTask(with: req)
-                    self.task?.resume()
-                    print("Connected probably")
-                    receive()
+                    print("Requesting WS port from TMM...")
+                    guard let request = TMMServerSocketPortRequest(returl: "socketport://spp4d.playground.ios").makeTMMRequestURL() else {
+                        print("Failed to make request URL")
+                        return
+                    }
+                    UIApplication.shared.open(request) { success in
+                        print("UIApplication.shared.open received: \(success)")
+                    }
                 }.buttonStyle(.bordered)
                 Text("WS Failures : \(ws.failures)")
                 Text("Self Failures : \(self.failures)")
@@ -114,5 +103,23 @@ struct CatalystWebSocketView: View {
             messages += newValue
         })
         .padding()
+        .onOpenURL { url in
+            print("onOpenUrl : \(url)")
+            
+            guard let response = TMMServerSocketPortResponse.decode(response: url) else {
+                print("Failed parsing TMM response")
+                return
+            }
+            print("TMM sent port: \(response.port)")
+            
+            self.messages.removeAll()
+            guard let url = URL(string:"ws://127.0.0.1:\(response.port)") else { return }
+            let req = URLRequest(url: url)
+            
+            self.task = URLSession.shared.webSocketTask(with: req)
+            self.task?.resume()
+            print("Connected probably")
+            receive()
+        }
     }
 }

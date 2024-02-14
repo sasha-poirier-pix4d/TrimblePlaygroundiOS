@@ -26,6 +26,8 @@
 		CF86FCB62B6BE36E000455CF /* CatalystWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCB52B6BE36E000455CF /* CatalystWebSocket.swift */; };
 		CF86FCBA2B6BE551000455CF /* CatalystFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCB92B6BE551000455CF /* CatalystFacade.swift */; };
 		CF86FCBE2B6BEB92000455CF /* CatalystSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCBD2B6BEB92000455CF /* CatalystSDK.swift */; };
+		CF9ED97D2B7CC854002D5048 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CF9ED97C2B7CC854002D5048 /* README.md */; };
+		CF9ED97F2B7CD2E9002D5048 /* TMMServerSocketPort.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9ED97E2B7CD2E9002D5048 /* TMMServerSocketPort.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		CF86FCB52B6BE36E000455CF /* CatalystWebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalystWebSocket.swift; sourceTree = "<group>"; };
 		CF86FCB92B6BE551000455CF /* CatalystFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalystFacade.swift; sourceTree = "<group>"; };
 		CF86FCBD2B6BEB92000455CF /* CatalystSDK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalystSDK.swift; sourceTree = "<group>"; };
+		CF9ED97C2B7CC854002D5048 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CF9ED97E2B7CD2E9002D5048 /* TMMServerSocketPort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMMServerSocketPort.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		CF86FC612B6B7AE0000455CF = {
 			isa = PBXGroup;
 			children = (
+				CF9ED97C2B7CC854002D5048 /* README.md */,
 				CF86FC9B2B6B7B18000455CF /* Frameworks */,
 				CF86FC6C2B6B7AE0000455CF /* TrimblePlayground */,
 				CF86FC7D2B6B7AE4000455CF /* TrimblePlaygroundTests */,
@@ -130,6 +135,7 @@
 				CF3040172B722B1700EE2DC1 /* CatalystWebSocketOLD.swift */,
 				CF86FCB12B6BDE4E000455CF /* MockTrimbleWebSocket.swift */,
 				CF86FCAB2B6BC8C8000455CF /* PseudoExtras.swift */,
+				CF9ED97E2B7CD2E9002D5048 /* TMMServerSocketPort.swift */,
 				CF86FC712B6B7AE4000455CF /* Assets.xcassets */,
 				CF86FC732B6B7AE4000455CF /* Preview Content */,
 			);
@@ -273,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF9ED97D2B7CC854002D5048 /* README.md in Resources */,
 				CF86FC752B6B7AE4000455CF /* Preview Assets.xcassets in Resources */,
 				CF86FC722B6B7AE4000455CF /* Assets.xcassets in Resources */,
 			);
@@ -304,6 +311,7 @@
 				CF86FC702B6B7AE0000455CF /* ContentView.swift in Sources */,
 				CF86FCB22B6BDE4E000455CF /* MockTrimbleWebSocket.swift in Sources */,
 				CF86FCBE2B6BEB92000455CF /* CatalystSDK.swift in Sources */,
+				CF9ED97F2B7CD2E9002D5048 /* TMMServerSocketPort.swift in Sources */,
 				CF86FCAC2B6BC8C8000455CF /* PseudoExtras.swift in Sources */,
 				CF86FC6E2B6B7AE0000455CF /* TrimblePlaygroundApp.swift in Sources */,
 				CF3040182B722B1700EE2DC1 /* CatalystWebSocketOLD.swift in Sources */,
@@ -531,6 +539,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HKB93E894N;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -550,6 +559,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HKB93E894N;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -568,6 +578,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HKB93E894N;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ting.TrimblePlaygroundUITests;
@@ -585,6 +596,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HKB93E894N;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ting.TrimblePlaygroundUITests;
