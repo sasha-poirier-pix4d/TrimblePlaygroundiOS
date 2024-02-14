@@ -16,34 +16,79 @@ struct CatalystWebSocketView: View {
     @State var failures: Int = 0
     
     @State private var task: URLSessionWebSocketTask?
+    
+    @State private var currentWarning: WarningItem?
+    
+    private func setWarning(warning: WarningItem) {
+        DispatchQueue.main.async {
+            currentWarning = warning
+        }
+    }
+    
+    struct WarningItem: Identifiable {
+        public let id = UUID()
+        public let code: Int
+        public let domain: String
+    }
+    
+    enum Domains: String {
+        case NSURLErrorDomain = "Cannot connect to WebSocket, make sure you are connected to"
+        case TMMNotAccepting = "Make sure you have Trimble Mobile Manager installed"
+        case TMMParseFailure = "Failed to receive WebSocket port from TMM"
+        case MessageParsingFailure = "Failed parsing a TMM location message"
+    }
 
     private func receive() {
         if (task == nil) {
             print("Task was somehow null...")
         }
         task?.receive { result in switch result {
+            //Possible failures
+            /*
+             Cannot connect to server (i.e. server not connected, which means the Trimble Catalyst DA2 probably isn't connected through TMM)
+             Failure: Error Domain=NSURLErrorDomain Code=-1004 "Could not connect to the server." UserInfo={NSErrorFailingURLStringKey=ws://127.0.0.1:9635/, NSLocalizedDescription=Could not connect to the server., NSErrorFailingURLKey=ws://127.0.0.1:9635/}
+             */
+            /*
+             Issue when navigating back
+             
+             This appears to be an iOS security feature, where background internet tasks are generally not allowed
+                but in particular are not allowed for WebSockets (URLSession can be run in background, but it doesn't support WS)
+             
+             Failure: Error Domain=NSPOSIXErrorDomain Code=57 "Socket is not connected" UserInfo={NSErrorFailingURLStringKey=ws://127.0.0.1:9635/, NSErrorFailingURLKey=ws://127.0.0.1:9635/}
+             */
             case .failure (let error):
                 print("Failure: \(error)")
-                //Possible failures
-                /*
-                 If server not online
-                 Failure: Error Domain=NSURLErrorDomain Code=-1004 "Could not connect to the server." UserInfo={NSErrorFailingURLStringKey=ws://127.0.0.1:9635/, NSLocalizedDescription=Could not connect to the server., NSErrorFailingURLKey=ws://127.0.0.1:9635/}
-                 */
-                
-                /*
-                 Seen when navigating back
-                 Failure: Error Domain=NSPOSIXErrorDomain Code=57 "Socket is not connected" UserInfo={NSErrorFailingURLStringKey=ws://127.0.0.1:9635/, NSErrorFailingURLKey=ws://127.0.0.1:9635/}
-                 */
+                switch (error as NSError).domain {
+                    case "NSURLErrorDomain":
+                        self.setWarning(warning: WarningItem(code: 0, domain: Domains.NSURLErrorDomain.rawValue))
+                        break
+                    case "NSPOSIXErrorDomain":
+                        break
+                    default:
+                        break
+                }
+                switch (error as NSError).code {
+                case -1004:
+                    //Probably couldn't connect...
+                    print("Failed to connect")
+                    break
+                case 57:
+                    //Probably when navigating back to app
+                    //Try to reconnect to ws
+                    // maybe restart whole process & request port again
+                    break
+                default:
+                    print("What")
+                    break
+                }
                 DispatchQueue.main.async {
                     self.failures += 1
                 }
-                
             case .success (let message):
                 switch message {
                     case .string (let text):
                         do {
                             let parsed = try PseudoExtras.parse(string: text)
-                            
                             
                             DispatchQueue.main.async {
                                 if (parsed != nil) {
@@ -51,9 +96,7 @@ struct CatalystWebSocketView: View {
                                 }
                             }
                         } catch {
-                            DispatchQueue.main.async {
-                                self.failures += 1
-                            }
+                            self.setWarning(warning: WarningItem(code: 0, domain: Domains.TMMParseFailure.rawValue))
                             print("Failed parsing following string: \(text)")
                         }
                     case .data (let data):
@@ -79,6 +122,9 @@ struct CatalystWebSocketView: View {
                     }
                     UIApplication.shared.open(request) { success in
                         print("UIApplication.shared.open received: \(success)")
+                        if (!success) {
+                            self.setWarning(warning: WarningItem(code: 0, domain: Domains.TMMNotAccepting.rawValue))
+                        }
                     }
                 }.buttonStyle(.bordered)
                 Text("WS Failures : \(ws.failures)")
@@ -107,7 +153,7 @@ struct CatalystWebSocketView: View {
             print("onOpenUrl : \(url)")
             
             guard let response = TMMServerSocketPortResponse.decode(response: url) else {
-                print("Failed parsing TMM response")
+                self.setWarning(warning: WarningItem(code: 0, domain: Domains.TMMParseFailure.rawValue))
                 return
             }
             print("TMM sent port: \(response.port)")
@@ -120,6 +166,9 @@ struct CatalystWebSocketView: View {
             self.task?.resume()
             print("Connected probably")
             receive()
+        }
+        .alert(item: $currentWarning) { show in
+            Alert(title: Text(String(show.code)), message: Text(show.domain), dismissButton: .cancel())
         }
     }
 }
