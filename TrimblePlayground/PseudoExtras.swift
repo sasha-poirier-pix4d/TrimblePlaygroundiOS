@@ -13,6 +13,21 @@ struct PseudoExtras: Decodable, Identifiable, Equatable {
     }
     
     public let id = UUID()
+    //public let id: UUID
+    
+    public enum CodingKeys : String, CodingKey {
+        case id, latitude, longitude, altitude,
+            speed, bearing,
+            accuracy, verticalAccuracy = "verticalAccuracyMeters",
+            hdop, vdop, pdop,
+             diffAge, diffStatus,
+            vrms, hrms,
+            receiverModel, mockProvider,
+            mslHeight, undulation, geoidModel,
+            utcTime, gpsTimeStamp, utcTimeStamp,
+            subscriptionType, satellites, totalSatInView,
+            satelliteView
+    }
 
     public let latitude: Double
     public let longitude: Double
@@ -20,7 +35,8 @@ struct PseudoExtras: Decodable, Identifiable, Equatable {
     
     public let speed: Float
     public let bearing: Float
-    public let accuracy: Float
+    public let accuracy: Float //TODO if horizontal rename to horizontalAccuracy
+    public let verticalAccuracy: Float
     
     public let hdop: Float
     public let vdop: Float
@@ -142,7 +158,7 @@ struct PseudoExtras: Decodable, Identifiable, Equatable {
     }
     
     static var zero: PseudoExtras {
-        return PseudoExtras(latitude: 0, longitude: 0, altitude: 0, speed: 0, bearing: 0, accuracy: 0, hdop: 0, vdop: 0, pdop: 0, diffAge: 0, diffStatus: DiffStatus.Unknown, vrms: 0, hrms: 0, receiverModel: "", mockProvider: "", mslHeight: 0, undulation: 0, geoidModel: "", utcTime: 0, gpsTimeStamp: "", utcTimeStamp: "", subscriptionType: SubscriptionType.Free, satellites: 0, totalSatInView: 0, satelliteView: [])
+        return PseudoExtras(latitude: 0, longitude: 0, altitude: 0, speed: 0, bearing: 0, accuracy: 0, verticalAccuracy: 0, hdop: 0, vdop: 0, pdop: 0, diffAge: 0, diffStatus: DiffStatus.Unknown, vrms: 0, hrms: 0, receiverModel: "", mockProvider: "", mslHeight: 0, undulation: 0, geoidModel: "", utcTime: 0, gpsTimeStamp: "", utcTimeStamp: "", subscriptionType: SubscriptionType.Free, satellites: 0, totalSatInView: 0, satelliteView: [])
     }
     
     static var malley: PseudoExtras {
@@ -151,6 +167,6 @@ struct PseudoExtras: Decodable, Identifiable, Equatable {
         let lon = 6.600880505618732 - Double.random(in: -0.001...0.001)
         let millis = Float(Date().timeIntervalSince1970 * 1000)
         
-        return PseudoExtras(latitude: lat, longitude: lon, altitude: 400, speed: 0, bearing: 0, accuracy: 0, hdop: 0, vdop: 0, pdop: 0, diffAge: 0, diffStatus: DiffStatus.Unknown, vrms: 0, hrms: 0, receiverModel: "", mockProvider: "", mslHeight: 0, undulation: 0, geoidModel: "", utcTime: millis, gpsTimeStamp: "", utcTimeStamp: "", subscriptionType: SubscriptionType.Free, satellites: 0, totalSatInView: 0, satelliteView: [])
+        return PseudoExtras(latitude: lat, longitude: lon, altitude: 400, speed: 0, bearing: 0, accuracy: 0, verticalAccuracy: 0, hdop: 0, vdop: 0, pdop: 0, diffAge: 0, diffStatus: DiffStatus.Unknown, vrms: 0, hrms: 0, receiverModel: "", mockProvider: "", mslHeight: 0, undulation: 0, geoidModel: "", utcTime: millis, gpsTimeStamp: "", utcTimeStamp: "", subscriptionType: SubscriptionType.Free, satellites: 0, totalSatInView: 0, satelliteView: [])
     }
 }
