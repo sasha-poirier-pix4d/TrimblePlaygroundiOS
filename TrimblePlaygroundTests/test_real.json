@@ -6,6 +6,7 @@
     "speed": 0.1,
     "bearing": 175.0,
     "accuracy": 0.5,
+    "verticalAccuracyMeters": 5.0,
     
     "hdop": 0.2,
     "vdop": 0.2,
@@ -23,6 +24,7 @@
     
     "mslHeight": 520.0,
     "undulation": 32.0,
+    "geoidModel": "Yuck",
     
     "utcTime": 1706779821024,
     "gpsTimeStamp": "",
@@ -33,7 +35,7 @@
     "satellites": 2,
     "totalSatInView": 3,
 
-    "satellitesView": [
+    "satelliteView": [
         {
             "Id":12,
             "Elv": 15,
