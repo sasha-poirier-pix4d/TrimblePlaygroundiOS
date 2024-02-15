@@ -33,6 +33,7 @@ struct CatalystWebSocketView: View {
     
     enum Domains: String {
         case NSURLErrorDomain = "Cannot connect to WebSocket, make sure you are connected to"
+        case NSPOSIXErrorDomain = "Connection to the WebSocket server lost, please try to reconnect"
         case TMMNotAccepting = "Make sure you have Trimble Mobile Manager installed"
         case TMMParseFailure = "Failed to receive WebSocket port from TMM"
         case MessageParsingFailure = "Failed parsing a TMM location message"
@@ -43,43 +44,19 @@ struct CatalystWebSocketView: View {
             print("Task was somehow null...")
         }
         task?.receive { result in switch result {
-            //Possible failures
-            /*
-             Cannot connect to server (i.e. server not connected, which means the Trimble Catalyst DA2 probably isn't connected through TMM)
-             Failure: Error Domain=NSURLErrorDomain Code=-1004 "Could not connect to the server." UserInfo={NSErrorFailingURLStringKey=ws://127.0.0.1:9635/, NSLocalizedDescription=Could not connect to the server., NSErrorFailingURLKey=ws://127.0.0.1:9635/}
-             */
-            /*
-             Issue when navigating back
-             
-             This appears to be an iOS security feature, where background internet tasks are generally not allowed
-                but in particular are not allowed for WebSockets (URLSession can be run in background, but it doesn't support WS)
-             
-             Failure: Error Domain=NSPOSIXErrorDomain Code=57 "Socket is not connected" UserInfo={NSErrorFailingURLStringKey=ws://127.0.0.1:9635/, NSErrorFailingURLKey=ws://127.0.0.1:9635/}
-             */
             case .failure (let error):
                 print("Failure: \(error)")
                 switch (error as NSError).domain {
-                    case "NSURLErrorDomain":
+                    //Cannot connect i.e. server not running, Trimble device not connected
+                    case "NSURLErrorDomain":    //code -1004
                         self.setWarning(warning: WarningItem(code: 0, domain: Domains.NSURLErrorDomain.rawValue))
                         break
-                    case "NSPOSIXErrorDomain":
+                    //Socket not connected / disconnected, i.e. websocket client gets killed when leaving the app
+                    case "NSPOSIXErrorDomain":  //code 57
+                        self.setWarning(warning: WarningItem(code: 0, domain: Domains.NSPOSIXErrorDomain.rawValue))
                         break
                     default:
                         break
-                }
-                switch (error as NSError).code {
-                case -1004:
-                    //Probably couldn't connect...
-                    print("Failed to connect")
-                    break
-                case 57:
-                    //Probably when navigating back to app
-                    //Try to reconnect to ws
-                    // maybe restart whole process & request port again
-                    break
-                default:
-                    print("What")
-                    break
                 }
                 DispatchQueue.main.async {
                     self.failures += 1
