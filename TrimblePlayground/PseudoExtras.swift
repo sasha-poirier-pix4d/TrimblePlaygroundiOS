@@ -68,13 +68,13 @@ struct PseudoExtras: Decodable, Identifiable, Equatable {
     
     public let receiverModel: String
     public let mockProvider: String
-    public let battery: Int?    ////May not receive for Catalyst DA2
+    public let battery: Int?    ////Not available for Catalyst DA2
     
     public let mslHeight: Double?   ///Is marked as nullable in some parts of documentation
     public let undulation: Double?  ///Is marked as nullable in some parts of documentation
     public let geoidModel: String?  ///Not in all parts of the documentation
     
-    public let utcTime: Float   //Seems to be device uptime or something
+    public let utcTime: Float   ///Seems to be device uptime or something
     public let gpsTimeStamp: String
     public let utcTimeStamp: String
     

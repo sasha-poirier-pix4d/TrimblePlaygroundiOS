@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CF3040182B722B1700EE2DC1 /* CatalystWebSocketOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3040172B722B1700EE2DC1 /* CatalystWebSocketOLD.swift */; };
+		CF559D8B2B7DF99200D08727 /* MockTrimbleWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCB12B6BDE4E000455CF /* MockTrimbleWebSocket.swift */; };
+		CF559D8D2B7DFC4700D08727 /* test_partial.json in Resources */ = {isa = PBXBuildFile; fileRef = CF559D8C2B7DFC4700D08727 /* test_partial.json */; };
 		CF75A43A2B76C84500947807 /* test_real.json in Resources */ = {isa = PBXBuildFile; fileRef = CF75A4392B76C84500947807 /* test_real.json */; };
 		CF86FC6E2B6B7AE0000455CF /* TrimblePlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FC6D2B6B7AE0000455CF /* TrimblePlaygroundApp.swift */; };
 		CF86FC702B6B7AE0000455CF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FC6F2B6B7AE0000455CF /* ContentView.swift */; };
@@ -22,7 +24,6 @@
 		CF86FCAD2B6BC8C8000455CF /* PseudoExtras.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCAB2B6BC8C8000455CF /* PseudoExtras.swift */; };
 		CF86FCAE2B6BC8C8000455CF /* PseudoExtras.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCAB2B6BC8C8000455CF /* PseudoExtras.swift */; };
 		CF86FCB02B6BCDAB000455CF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF86FCAF2B6BCDAB000455CF /* MapKit.framework */; };
-		CF86FCB22B6BDE4E000455CF /* MockTrimbleWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCB12B6BDE4E000455CF /* MockTrimbleWebSocket.swift */; };
 		CF86FCB62B6BE36E000455CF /* CatalystWebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCB52B6BE36E000455CF /* CatalystWebSocket.swift */; };
 		CF86FCBA2B6BE551000455CF /* CatalystFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCB92B6BE551000455CF /* CatalystFacade.swift */; };
 		CF86FCBE2B6BEB92000455CF /* CatalystSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF86FCBD2B6BEB92000455CF /* CatalystSDK.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		CF3040172B722B1700EE2DC1 /* CatalystWebSocketOLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalystWebSocketOLD.swift; sourceTree = "<group>"; };
+		CF559D8C2B7DFC4700D08727 /* test_partial.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test_partial.json; sourceTree = "<group>"; };
 		CF75A4392B76C84500947807 /* test_real.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test_real.json; sourceTree = "<group>"; };
 		CF86FC6A2B6B7AE0000455CF /* TrimblePlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrimblePlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF86FC6D2B6B7AE0000455CF /* TrimblePlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimblePlaygroundApp.swift; sourceTree = "<group>"; };
@@ -133,9 +135,9 @@
 				CF86FCBD2B6BEB92000455CF /* CatalystSDK.swift */,
 				CF86FCB52B6BE36E000455CF /* CatalystWebSocket.swift */,
 				CF3040172B722B1700EE2DC1 /* CatalystWebSocketOLD.swift */,
-				CF86FCB12B6BDE4E000455CF /* MockTrimbleWebSocket.swift */,
 				CF86FCAB2B6BC8C8000455CF /* PseudoExtras.swift */,
 				CF9ED97E2B7CD2E9002D5048 /* TMMServerSocketPort.swift */,
+				CF86FCB12B6BDE4E000455CF /* MockTrimbleWebSocket.swift */,
 				CF86FC712B6B7AE4000455CF /* Assets.xcassets */,
 				CF86FC732B6B7AE4000455CF /* Preview Content */,
 			);
@@ -156,6 +158,7 @@
 				CF86FC7E2B6B7AE4000455CF /* TrimblePlaygroundTests.swift */,
 				CF86FCA72B6BAAAC000455CF /* test_doc_bad.json */,
 				CF75A4392B76C84500947807 /* test_real.json */,
+				CF559D8C2B7DFC4700D08727 /* test_partial.json */,
 			);
 			path = TrimblePlaygroundTests;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF75A43A2B76C84500947807 /* test_real.json in Resources */,
+				CF559D8D2B7DFC4700D08727 /* test_partial.json in Resources */,
 				CF86FCA82B6BAAAC000455CF /* test_doc_bad.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,7 +313,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF86FC702B6B7AE0000455CF /* ContentView.swift in Sources */,
-				CF86FCB22B6BDE4E000455CF /* MockTrimbleWebSocket.swift in Sources */,
 				CF86FCBE2B6BEB92000455CF /* CatalystSDK.swift in Sources */,
 				CF9ED97F2B7CD2E9002D5048 /* TMMServerSocketPort.swift in Sources */,
 				CF86FCAC2B6BC8C8000455CF /* PseudoExtras.swift in Sources */,
@@ -326,6 +329,7 @@
 			files = (
 				CF86FC7F2B6B7AE4000455CF /* TrimblePlaygroundTests.swift in Sources */,
 				CF86FCAD2B6BC8C8000455CF /* PseudoExtras.swift in Sources */,
+				CF559D8B2B7DF99200D08727 /* MockTrimbleWebSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

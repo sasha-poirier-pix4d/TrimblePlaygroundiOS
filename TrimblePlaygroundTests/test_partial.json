@@ -1,0 +1,36 @@
+{
+    "latitude": 46.5197,
+    "longitude": 6.6323,
+    "altitude": 500,
+    
+    "speed": 0.1,
+    "bearing": 175.0,
+    "accuracy": 0.5,
+    "verticalAccuracyMeters": 5.0,
+    
+    "hdop": 0.2,
+    "vdop": 0.2,
+    "pdop": 0.2,
+    
+    "diffAge": 0.1,
+    "diffStatus": 2,
+    
+    "vrms": 0.2,
+    "hrms": 0.2,
+    
+    "receiverModel": "Some Model",
+    "mockProvider": "TMM",
+    
+    "utcTime": 191924.0,
+    "gpsTimeStamp": "2024-02-12T19:19:42.0000000",
+    "utcTimeStamp": "2024-02-12T19:19:24.0000000",
+    
+    "subscriptionType": 3,
+
+    "satellites": 0,
+    "totalSatInView": 0,
+
+    "satelliteView": [
+
+    ]
+}

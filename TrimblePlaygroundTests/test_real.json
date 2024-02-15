@@ -19,16 +19,16 @@
     "hrms": 0.2,
     
     "receiverModel": "Some Model",
-
     "mockProvider": "TMM",
+    "battery": 50,
     
     "mslHeight": 520.0,
     "undulation": 32.0,
     "geoidModel": "Yuck",
     
-    "utcTime": 1706779821024,
-    "gpsTimeStamp": "",
-    "utcTimeStamp": "",
+    "utcTime": 191924.0,
+    "gpsTimeStamp": "2024-02-12T19:19:42.0000000",
+    "utcTimeStamp": "2024-02-12T19:19:24.0000000",
     
     "subscriptionType": 2,
 
