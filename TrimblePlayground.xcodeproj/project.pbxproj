@@ -104,6 +104,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF559D8E2B7E18F300D08727 /* Shareable */ = {
+			isa = PBXGroup;
+			children = (
+				CF86FCAB2B6BC8C8000455CF /* PseudoExtras.swift */,
+				CF9ED97E2B7CD2E9002D5048 /* TMMServerSocketPort.swift */,
+				CF86FCB12B6BDE4E000455CF /* MockTrimbleWebSocket.swift */,
+			);
+			path = Shareable;
+			sourceTree = "<group>";
+		};
 		CF86FC612B6B7AE0000455CF = {
 			isa = PBXGroup;
 			children = (
@@ -133,11 +143,9 @@
 				CF86FC6F2B6B7AE0000455CF /* ContentView.swift */,
 				CF86FCB92B6BE551000455CF /* CatalystFacade.swift */,
 				CF86FCBD2B6BEB92000455CF /* CatalystSDK.swift */,
+				CF559D8E2B7E18F300D08727 /* Shareable */,
 				CF86FCB52B6BE36E000455CF /* CatalystWebSocket.swift */,
 				CF3040172B722B1700EE2DC1 /* CatalystWebSocketOLD.swift */,
-				CF86FCAB2B6BC8C8000455CF /* PseudoExtras.swift */,
-				CF9ED97E2B7CD2E9002D5048 /* TMMServerSocketPort.swift */,
-				CF86FCB12B6BDE4E000455CF /* MockTrimbleWebSocket.swift */,
 				CF86FC712B6B7AE4000455CF /* Assets.xcassets */,
 				CF86FC732B6B7AE4000455CF /* Preview Content */,
 			);

@@ -11,6 +11,8 @@ Features
 - Receives Location updates from TMM
 - Requests the WS port through URL schemes
 
+Everything in the Shareable group can be directly transfered into Catch, and worked into the RTK SDK. Things outside of this folder is mostly SwiftUI for the playground.
+
 ## Facade
 WND / TBA
 
