@@ -1,5 +1,8 @@
 # Trimble Playground (iOS)
 
+![IMG_0005](https://github.com/sasha-poirier-pix4d/TrimblePlaygroundiOS/assets/110474015/c0a97696-e4e9-422f-9ad0-efef5306ed8e)
+
+
 Playground / Sample / Proving Ground for adding Trimble Catalyst DA2 support into Pix4Dcatch
 
 As Trimble has many differences compared to Vigram or Emlid, namely Trimble account, subscriptions, and licenses management, or using WebSockets to integrate (different tech than other RTK receivers), it was easier to play around with things in a different repo.
